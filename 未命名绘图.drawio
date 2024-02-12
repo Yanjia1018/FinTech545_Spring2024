@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-02-12T04:25:30.056Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="_9rnnCQA1etS7jJ6vi3v" version="23.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-02-12T04:32:01.304Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="tx9VUkj3p0KyBbZeVRDp" version="23.1.2" type="github">
   <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
     <mxGraphModel dx="954" dy="558" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -25,7 +25,7 @@
         <mxCell id="n1krr-TapEZPdS05sETF-3" value="Dstabase" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
           <mxGeometry x="500" y="40" width="100" height="300" as="geometry" />
         </mxCell>
-        <mxCell id="n1krr-TapEZPdS05sETF-5" value="Forward request" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" target="n1krr-TapEZPdS05sETF-1">
+        <mxCell id="n1krr-TapEZPdS05sETF-5" value="Forward request&lt;br&gt;detail()" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" target="n1krr-TapEZPdS05sETF-1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="270" y="160" as="sourcePoint" />
             <Array as="points">
@@ -34,7 +34,7 @@
             <mxPoint x="410" y="160" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="n1krr-TapEZPdS05sETF-6" value="Retrieve post details" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" target="n1krr-TapEZPdS05sETF-3">
+        <mxCell id="n1krr-TapEZPdS05sETF-6" value="Retrieve post details&lt;br&gt;&lt;div style=&quot;color: rgb(59, 59, 59); line-height: 19px;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;get_post()&lt;/font&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" target="n1krr-TapEZPdS05sETF-3">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="410" y="180" as="sourcePoint" />
             <Array as="points">
@@ -43,7 +43,7 @@
             <mxPoint x="550" y="180" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="n1krr-TapEZPdS05sETF-7" value="Post details" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" target="n1krr-TapEZPdS05sETF-1">
+        <mxCell id="n1krr-TapEZPdS05sETF-7" value="Post details&lt;br&gt;return post" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" edge="1" parent="1" target="n1krr-TapEZPdS05sETF-1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="410" y="220" as="targetPoint" />
             <Array as="points">
@@ -52,13 +52,14 @@
             <mxPoint x="550" y="220" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="n1krr-TapEZPdS05sETF-8" value="Construct HTML response" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+        <mxCell id="n1krr-TapEZPdS05sETF-8" value="Construct HTML response&lt;br&gt;return response" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="270" y="250" as="targetPoint" />
             <Array as="points">
               <mxPoint x="335" y="250" />
             </Array>
             <mxPoint x="410" y="250" as="sourcePoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="n1krr-TapEZPdS05sETF-9" value="Deliver HTML response" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
