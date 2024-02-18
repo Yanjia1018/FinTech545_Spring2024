@@ -52,6 +52,7 @@ sigma[1,2] = 1.0
 sigma[2,1] = 1.0
 eigvals(sigma)
 
+
 chol_pd!(root,sigma)
 
 #Cholesky that assumes PSD
@@ -75,10 +76,9 @@ function chol_psd!(root,a)
         end
         root[j,j] =  sqrt(temp);
 
-        #Check for the 0 eigan value.  Just set the column to 0 if we have one
-        if 0.0 == root[j,j]
-            root[j,(j+1):n] .= 0.0
-        else
+        #Check for the 0 eigan value.  The column will already be 0, move to 
+        #next column
+        if 0.0 != root[j,j]
             #update off diagonal rows of the column
             ir = 1.0/root[j,j]
             for i in (j+1):n
@@ -273,9 +273,10 @@ chol_psd!(root,near_pairwise)
 #PCA
 vals, vecs = eigen(near_pairwise)
 
+tv = sum(vals)
 #Keep values 2:5
-vals = vals[2:5]
-vecs = vecs[:,2:5]
+vals = vals[3:5]
+vecs = vecs[:,3:5]
 B = vecs * diagm(sqrt.(vals))
 r = (B * randn(4,100_000_000))'
 cov(r)
